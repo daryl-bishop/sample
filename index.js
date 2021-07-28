@@ -1,6 +1,6 @@
 "use strict";
 
-  
+(function() {
   
   // handle response with callback and error
   // const test = () => {
@@ -168,5 +168,8 @@
           form.name.focus(); // selects the name input
       }).catch(err => console.log(err));
   });
+
+  getAllBrews();
+
+})();
  
-  
