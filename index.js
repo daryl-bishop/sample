@@ -1,4 +1,4 @@
-
+"use strict";
 
   
   
@@ -107,35 +107,22 @@
   }
   axios.put('${baseURL}/replaceBrew/${data1.id}', data)
   .then(res => {
-      console.log(updateType);
-      const brew = res.data;
+       console.log(updateType);
+       const brew = res.data;
       console.log(res.data);
 
       console.log(brew.id);
 
   }).catch(err => console.log(err));
+  
 
-  const updateForm = document.querySelector("section#updateBrew > form");
+  
   getAllBrews();
-  location.reload();
+  //location.reload();
 }
 )
 
-
-  const updateBrew = id => {
-    axios.put(`${baseURL}/updateBrew/${id}`, data1)
-        .then(res => {
-            console.log(updateType);
-            const brew = res.data;
-            console.log(res.data);
-
-            console.log(brew.id);
-
-        }).catch(err => console.log(err));
     
-        const updateForm = document.querySelector("section#updateBook > form");
-
-    }
   const deleteBrew = id => {
       axios.delete(`${baseURL}/deleteBrew/${id}`)
           .then(res => {
@@ -156,7 +143,7 @@
 
   
   document.querySelector("button#getid").addEventListener('click', getBrewById);
-  // document.querySelector("button#getAll").addEventListener('click', getAllBrews);
+  
   document.querySelector("section#postSection > form").addEventListener('submit', (e) => {
 
       e.preventDefault(); // stops the form submitting in the default way
